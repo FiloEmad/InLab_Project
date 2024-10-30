@@ -1,0 +1,216 @@
+﻿@page
+@model InLab_Project.Pages.Admin.IndexModel
+@{
+}
+
+<!-- banner bg main start -->
+<div class="banner_bg_main">
+    <!-- logo section start -->
+    <div class="logo_section">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12">
+                     <div class="logo"><a href="index.html"><img src="images/logo.png"></a></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- logo section end -->
+    <!-- header section start -->
+    <div class="header_section">
+        <div class="container">
+            <div class="containt_main">
+                <div class="dropdown">
+                    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Major
+                    </button>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                        <a class="dropdown-item" href="#">CIE</a>
+                        <a class="dropdown-item" href="#">BMS</a>
+                        <a class="dropdown-item" href="#">PHY</a>
+                    </div>
+                </div>
+                <div class="dropdown">
+                    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Batch
+                    </button>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                        <a class="dropdown-item" href="#">2023</a>
+                        <a class="dropdown-item" href="#">2022</a>
+                        <a class="dropdown-item" href="#">2021</a>
+                    </div>
+                </div>
+                                <div class="dropdown">
+                    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Students
+                    </button>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                        <a class="dropdown-item" href="#">student1</a>
+                        <a class="dropdown-item" href="#">student2</a>
+                        <a class="dropdown-item" href="#">student3</a>
+                    </div>
+                </div>
+                <div class="dropdown">
+                    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Advisor
+                    </button>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                        <a class="dropdown-item" href="#">advisor1</a>
+                        <a class="dropdown-item" href="#">advisor2</a>
+                        <a class="dropdown-item" href="#">advisor3</a>
+                    </div>
+                </div>
+                <div class="main">
+                    <!-- Another variation with a button -->
+                    <div class="input-group">
+                        <input type="text" class="form-control" placeholder="Search this blog">
+                        <div class="input-group-append">
+                            <button class="btn btn-secondary" type="button" style="background-color: #f26522; border-color:#f26522 ">
+                                <i class="fa fa-search"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="header_box">
+                    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" aria-haspopup="true" aria-expanded="false">
+                        Filter
+                    </button>
+                    <form method="post" asp-page-handler="Logout">
+                        <button class="btn btn-secondary dropdown-toggle" type="submit">
+                            Logout
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- header section end -->
+    <!-- banner section start -->
+    <div class="banner_section layout_padding">
+        <div class="container">
+            <div class="col-sm-12">
+                <h1 class="banner_taital">Get Start <br>Welcome @Model.name </h1>
+            </div>
+        </div>
+    </div>
+    <!-- banner section end -->
+</div>
+<!-- banner bg main end -->
+<!-- fashion section start -->
+<div class="fashion_section">
+    <div id="main_slider" class="carousel slide" data-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <div class="container">
+                    <h1 class="fashion_taital">Projects</h1>
+                    <div class="fashion_section_2">
+                        <div class="row">
+                            <div class="col-lg-4 col-sm-4">
+                                <div class="box_main">
+                                    <h4 class="shirt_text">Project1</h4>
+                                    <p class="price_text">Batch <span style="color: #262626;">2023</span></p>
+                                    <p class="price_text">Major <span style="color: #262626;">CIE</span></p>
+                                    <div class="tshirt_img"><img src="images/logo.png"></div>
+                                    <p class="price_text">Students <span style="color: #262626;">student1, student2, student3</span></p>
+                                    <p class="price_text">Advisor <span style="color: #262626;">Advisor1</span></p>
+
+                                    <div class="btn_main">
+                                        <div class="buy_bt"><a href="#">Details</a></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-sm-4">
+                                <div class="box_main">
+                                    <h4 class="shirt_text">Project1</h4>
+                                    <p class="price_text">Batch <span style="color: #262626;">2023</span></p>
+                                    <p class="price_text">Major <span style="color: #262626;">CIE</span></p>
+                                    <div class="tshirt_img"><img src="images/logo.png"></div>
+                                    <p class="price_text">Students <span style="color: #262626;">student1, student2, student3</span></p>
+                                    <p class="price_text">Advisor <span style="color: #262626;">Advisor1</span></p>
+
+                                    <div class="btn_main">
+                                        <div class="buy_bt"><a href="#">Details</a></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-sm-4">
+                                <div class="box_main">
+                                    <h4 class="shirt_text">Project1</h4>
+                                    <p class="price_text">Batch <span style="color: #262626;">2023</span></p>
+                                    <p class="price_text">Major <span style="color: #262626;">CIE</span></p>
+                                    <div class="tshirt_img"><img src="images/logo.png"></div>
+                                    <p class="price_text">Students <span style="color: #262626;">student1, student2, student3</span></p>
+                                    <p class="price_text">Advisor <span style="color: #262626;">Advisor1</span></p>
+
+                                    <div class="btn_main">
+                                        <div class="buy_bt"><a href="#">Details</a></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <div class="container">
+                    <h1 class="fashion_taital">Projects</h1>
+                    <div class="fashion_section_2">
+                        <div class="row">
+                            <div class="col-lg-4 col-sm-4">
+                                <div class="box_main">
+                                    <h4 class="shirt_text">Project1</h4>
+                                    <p class="price_text">Batch <span style="color: #262626;">2023</span></p>
+                                    <p class="price_text">Major <span style="color: #262626;">CIE</span></p>
+                                    <div class="tshirt_img"><img src="images/logo.png"></div>
+                                    <p class="price_text">Students <span style="color: #262626;">student1, student2, student3</span></p>
+                                    <p class="price_text">Advisor <span style="color: #262626;">Advisor1</span></p>
+
+                                    <div class="btn_main">
+                                        <div class="buy_bt"><a href="#">Details</a></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-sm-4">
+                                <div class="box_main">
+                                    <h4 class="shirt_text">Project1</h4>
+                                    <p class="price_text">Batch <span style="color: #262626;">2023</span></p>
+                                    <p class="price_text">Major <span style="color: #262626;">CIE</span></p>
+                                    <div class="tshirt_img"><img src="images/logo.png"></div>
+                                    <p class="price_text">Students <span style="color: #262626;">student1, student2, student3</span></p>
+                                    <p class="price_text">Advisor <span style="color: #262626;">Advisor1</span></p>
+
+                                    <div class="btn_main">
+                                        <div class="buy_bt"><a href="#">Details</a></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-sm-4">
+                                <div class="box_main">
+                                    <h4 class="shirt_text">Project1</h4>
+                                    <p class="price_text">Batch <span style="color: #262626;">2023</span></p>
+                                    <p class="price_text">Major <span style="color: #262626;">CIE</span></p>
+                                    <div class="tshirt_img"><img src="images/logo.png"></div>
+                                    <p class="price_text">Students <span style="color: #262626;">student1, student2, student3</span></p>
+                                    <p class="price_text">Advisor <span style="color: #262626;">Advisor1</span></p>
+
+                                    <div class="btn_main">
+                                        <div class="buy_bt"><a href="#">Details</a></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <a class="carousel-control-prev" href="#main_slider" role="button" data-slide="prev">
+            <i class="fa fa-angle-left"></i>
+        </a>
+        <a class="carousel-control-next" href="#main_slider" role="button" data-slide="next">
+            <i class="fa fa-angle-right"></i>
+        </a>
+    </div>
+</div>
+<!-- fashion section end -->
+
