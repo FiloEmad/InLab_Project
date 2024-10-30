@@ -1,7 +1,7 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 
-namespace InLab_Project.Pages.Admin
+namespace InLab_Project.Pages.Student
 {
 
     public class IndexModel : PageModel
@@ -10,7 +10,7 @@ namespace InLab_Project.Pages.Admin
         public string name { get; set; }
         public IActionResult OnGet()
         {
-            if(string.IsNullOrWhiteSpace(HttpContext.Session.GetString("name")))
+            if (string.IsNullOrWhiteSpace(HttpContext.Session.GetString("name")))
             {
                 return RedirectToPage("/LogIn");
             }
@@ -20,7 +20,8 @@ namespace InLab_Project.Pages.Admin
                 return Page();
             }
         }
-        public IActionResult OnPostLogout() {
+        public IActionResult OnPostLogout()
+        {
             return RedirectToPage("/Index");
         }
     }
