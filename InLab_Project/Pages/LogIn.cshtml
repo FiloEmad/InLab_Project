@@ -65,7 +65,9 @@
                     <div class="input-group">
                         <form method="post">
                             <input type="text" asp-for="@Model.name" class="form-control" placeholder="username">
-                            <input type="text" class="form-control" asp-for="@Model.pass" placeholder="password">
+                            <span asp-validation-for=@Model.name></span>
+
+                            <input type="password" class="form-control" asp-for="@Model.pass" placeholder="password">
                             <input type="submit" class="form-control" name="login" />
                         </form>
 

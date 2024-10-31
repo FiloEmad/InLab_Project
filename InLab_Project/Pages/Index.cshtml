@@ -76,11 +76,23 @@
                     <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" aria-haspopup="true" aria-expanded="false">
                         Filter
                     </button>
-                    <form method="post" asp-page-handler="Login">
-                        <button class="btn btn-secondary dropdown-toggle" type="submit">
-                            Login
-                        </button>
-                    </form>
+                    @if(string.IsNullOrEmpty(HttpContext.Session.GetString("name")))
+                    {
+                        <form method="post" asp-page-handler="Login">
+                            <button class="btn btn-secondary dropdown-toggle" type="submit">
+                                Login
+                            </button>
+                        </form>
+                    }
+                    else
+                    {
+                        <form method="post" asp-page-handler="Logout">
+                            <button class="btn btn-secondary dropdown-toggle" type="submit">
+                                LogOut
+                            </button>
+                        </form>
+                    }
+
                 </div>
             </div>
         </div>
@@ -89,9 +101,29 @@
     <!-- banner section start -->
     <div class="banner_section layout_padding">
         <div class="container">
-            <div class="col-sm-12">
-                <h1 class="banner_taital">Get Start <br>Projects of ZewailCity for Science and Technology</h1>
-            </div>
+            @if (string.IsNullOrEmpty(HttpContext.Session.GetString("name")))
+            {
+                <div class="col-sm-12">
+                    <h1 class="banner_taital">Get Start <br>Projects of ZewailCity for Science and Technology</h1>
+                </div>
+            }
+            else
+            {
+                if (@HttpContext.Session.GetString("name").Contains("a-"))
+                {
+                    <div class="col-sm-12">
+                        <h1 class="banner_taital">Get Start <br>Welcom, admin @HttpContext.Session.GetString("name")</h1>
+                    </div>
+                }
+                else if (@HttpContext.Session.GetString("name").Contains("s-"))
+                {
+                    <div class="col-sm-12">
+                        <h1 class="banner_taital">Get Start <br>Welcom, student @HttpContext.Session.GetString("name")</h1>
+                    </div>
+                }
+
+            }
+
         </div>
     </div>
     <!-- banner section end -->

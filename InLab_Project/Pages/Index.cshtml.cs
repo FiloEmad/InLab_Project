@@ -7,19 +7,32 @@ namespace InLab_Project.Pages
 	{
 		private readonly ILogger<IndexModel> _logger;
 
+		[BindProperty(SupportsGet = true)]
+		public string name { get; set; }
 		public IndexModel(ILogger<IndexModel> logger)
 		{
 			_logger = logger;
 		}
 
-		public void OnGet()
+		public IActionResult OnGet()
 		{
-
+			if (!string.IsNullOrEmpty(HttpContext.Session.GetString("name")))
+			{
+				name = HttpContext.Session.GetString("name")!;
+			}
+			return Page();
 		}
 
 		public IActionResult OnPostLogin()
 		{
 			return RedirectToPage("/LogIn");
 		}
-	}
+
+        public IActionResult OnPostLogout()
+        {
+            HttpContext.Session.SetString("name", "");
+
+            return Page();
+        }
+    }
 }
