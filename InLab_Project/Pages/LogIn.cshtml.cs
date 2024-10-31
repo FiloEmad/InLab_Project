@@ -8,11 +8,10 @@ namespace InLab_Project.Pages
     {
         [BindProperty(SupportsGet = true)]
         [Required (ErrorMessage ="This field is required")]
-        public string name { get; set; }
+        public Models.User USER2 { get; set; }
 
-        [BindProperty(SupportsGet = true)]
-        [Required]
-        public string pass { get; set; }
+        
+        
         public IActionResult OnGet()
         {
             if (!string.IsNullOrEmpty(HttpContext.Session.GetString("name")))
@@ -33,14 +32,15 @@ namespace InLab_Project.Pages
             }
             else
             {
-                HttpContext.Session.SetString("name", name);
-                if (name.Contains("a-"))
+                HttpContext.Session.SetString("name", USER2.name);
+                HttpContext.Session.SetString("PASS", USER2.password);
+                if (USER2.name.Contains("a-"))
                 {
-                    return RedirectToPage("/Index", new { name = this.name });
+                    return RedirectToPage("/Index", new { USER1 = this.USER2 });
                 }
-                else if ((name.Contains("s-")))
+                else if ((USER2.name.Contains("s-")))
                 {
-                    return RedirectToPage("/Index", new { name = this.name });
+                    return RedirectToPage("/Index", new { USER1 = this.USER2});
                 }
                 else
                 {

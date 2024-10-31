@@ -8,7 +8,7 @@ namespace InLab_Project.Pages
 		private readonly ILogger<IndexModel> _logger;
 
 		[BindProperty(SupportsGet = true)]
-		public string name { get; set; }
+		public Models.User USER1 { get; set; }
 		public IndexModel(ILogger<IndexModel> logger)
 		{
 			_logger = logger;
@@ -18,7 +18,7 @@ namespace InLab_Project.Pages
 		{
 			if (!string.IsNullOrEmpty(HttpContext.Session.GetString("name")))
 			{
-				name = HttpContext.Session.GetString("name")!;
+				 USER1.name= HttpContext.Session.GetString("name")!;
 			}
 			return Page();
 		}
